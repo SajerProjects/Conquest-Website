@@ -1,11 +1,11 @@
 import SectionReveal from './SectionReveal';
 
 const TRAITS = [
-  '...see what\'s coming and refuse to be caught off guard',
+  '...see what\'s coming and don\'t wait for permission to move',
   '...want to understand the systems, not just the tools',
   '...are done consuming and ready to build',
-  '...know that who you surround yourself with determines where you end up',
-  '...are looking for the room they haven\'t found yet',
+  '...have never fit the default path',
+  '...are looking for the room that changes everything',
 ];
 
 export default function WhoItsFor() {
@@ -14,7 +14,7 @@ export default function WhoItsFor() {
       <div className="max-w-[1200px] mx-auto px-6 md:px-10">
         <SectionReveal>
           <p className="text-xs tracking-[0.3em] uppercase text-text-muted font-mono mb-12">
-            04 / Who
+            03 / Who
           </p>
         </SectionReveal>
 
@@ -36,7 +36,7 @@ export default function WhoItsFor() {
 
         <SectionReveal delay={0.5}>
           <p className="text-lg text-text-primary font-medium">
-            If you need convincing, it's not for you.
+            You already know if this is you.
           </p>
         </SectionReveal>
       </div>

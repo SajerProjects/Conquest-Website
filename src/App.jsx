@@ -17,10 +17,10 @@ function Home() {
       <main>
         <Hero />
         <TheGap />
-        <TheProgram />
-        <Curriculum />
-        <WhoItsFor />
         <Principles />
+        <WhoItsFor />
+        <Curriculum />
+        <TheProgram />
         <ApplicationForm />
       </main>
       <Footer />
