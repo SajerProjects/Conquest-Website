@@ -52,8 +52,8 @@ export default function Hero() {
               transition={{ delay: 0.3, duration: 0.6 }}
               className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-xl mb-10"
             >
-              The people who will define the next era of AI are being selected
-              right now. This is where they sharpen themselves.
+              The people who will define what comes next are being selected
+              right now. This is where they're forged.
             </motion.p>
 
             <motion.div

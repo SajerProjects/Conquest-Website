@@ -46,7 +46,7 @@ export default function Curriculum() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {TOPICS.map((topic, i) => (
             <SectionReveal key={topic.title} delay={0.1 + i * 0.06}>
-              <div className="p-6 border border-border-light rounded-sm hover:border-border-light/60 transition-colors duration-300 h-full">
+              <div className="p-6 border border-border-light rounded-sm hover:border-accent/30 hover:bg-accent/[0.03] transition-all duration-300 h-full">
                 <h3 className="text-base font-semibold text-text-primary mb-3">
                   {topic.title}
                 </h3>

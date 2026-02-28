@@ -25,7 +25,7 @@ export default function Principles() {
       <div className="max-w-[1200px] mx-auto px-6 md:px-10">
         <SectionReveal>
           <p className="text-xs tracking-[0.3em] uppercase text-text-muted font-mono mb-12">
-            06 / Principles
+            05 / Principles
           </p>
         </SectionReveal>
 

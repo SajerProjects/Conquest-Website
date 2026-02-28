@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const NAV_LINKS = [
-  { label: 'Program', target: 'program' },
-  { label: 'About', target: 'about' },
-  { label: 'Apply', target: 'apply', accent: true },
+  { label: 'About', target: '/about', scroll: false },
+  { label: 'Apply', target: 'apply', scroll: true, accent: true },
 ];
 
 function scrollToSection(id) {
@@ -18,6 +18,8 @@ function scrollToSection(id) {
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -34,6 +36,28 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
 
+  const handleNavClick = (link) => {
+    if (link.scroll) {
+      if (location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => scrollToSection(link.target), 100);
+      } else {
+        scrollToSection(link.target);
+      }
+    } else {
+      navigate(link.target);
+    }
+  };
+
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    if (location.pathname !== '/') {
+      navigate('/');
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <nav
@@ -45,11 +69,8 @@ export default function Navbar() {
       >
         <div className="max-w-[1200px] mx-auto px-6 md:px-10 flex items-center justify-between h-[72px]">
           <a
-            href="#top"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
+            href="/"
+            onClick={handleLogoClick}
             className="text-text-primary font-semibold text-lg tracking-[0.2em] uppercase"
           >
             Conquest
@@ -60,7 +81,7 @@ export default function Navbar() {
             {NAV_LINKS.map((link) => (
               <button
                 key={link.target}
-                onClick={() => scrollToSection(link.target)}
+                onClick={() => handleNavClick(link)}
                 className={`text-sm tracking-wider uppercase transition-colors duration-300 cursor-pointer bg-transparent border-0 ${
                   link.accent
                     ? 'text-accent border border-accent/40 px-5 py-1.5 hover:bg-accent hover:text-bg'
@@ -115,7 +136,7 @@ export default function Navbar() {
                 transition={{ delay: i * 0.1, duration: 0.3 }}
                 onClick={() => {
                   setMobileOpen(false);
-                  setTimeout(() => scrollToSection(link.target), 100);
+                  setTimeout(() => handleNavClick(link), 100);
                 }}
                 className={`text-2xl tracking-[0.15em] uppercase bg-transparent border-0 cursor-pointer ${
                   link.accent ? 'text-accent' : 'text-text-primary'

@@ -1,15 +1,16 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TheGap from './components/TheGap';
 import TheProgram from './components/TheProgram';
 import Curriculum from './components/Curriculum';
 import WhoItsFor from './components/WhoItsFor';
-import Founder from './components/Founder';
 import Principles from './components/Principles';
 import ApplicationForm from './components/ApplicationForm';
 import Footer from './components/Footer';
+import About from './pages/About';
 
-export default function App() {
+function Home() {
   return (
     <>
       <Navbar />
@@ -19,11 +20,21 @@ export default function App() {
         <TheProgram />
         <Curriculum />
         <WhoItsFor />
-        <Founder />
         <Principles />
         <ApplicationForm />
       </main>
       <Footer />
     </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

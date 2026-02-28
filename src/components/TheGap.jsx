@@ -20,18 +20,17 @@ export default function TheGap() {
             </p>
             <p className="text-lg text-text-secondary leading-relaxed mb-6">
               The gap between these two groups is accelerating. The people
-              pulling ahead are compounding their advantage daily while
+              with agency are pulling ahead, compounding their advantage daily while
               everyone else falls further behind.
             </p>
             <p className="text-lg text-text-secondary leading-relaxed mb-6">
-              The internet is drowning in AI noise — recycled slop, shallow
-              tutorials, and hype disguised as education. No real filter for
+              The internet is drowning in AI noise — recycled slop and hype engineered to extract your attention. No real filter for
               quality. No community selecting for the people who actually want to
               build. No environment where the bar is high enough that being in
               the room means something.
             </p>
             <p className="text-lg text-text-primary leading-relaxed">
-              Conquest exists to make sure you're on the side that's going up.
+              Conquest was built for the people going up.
             </p>
           </div>
         </SectionReveal>
