@@ -5,7 +5,6 @@ import TheGap from './components/TheGap';
 import TheProgram from './components/TheProgram';
 import Curriculum from './components/Curriculum';
 import WhoItsFor from './components/WhoItsFor';
-import Principles from './components/Principles';
 import ApplicationForm from './components/ApplicationForm';
 import Footer from './components/Footer';
 import About from './pages/About';
@@ -17,7 +16,6 @@ function Home() {
       <main>
         <Hero />
         <TheGap />
-        <Principles />
         <WhoItsFor />
         <Curriculum />
         <TheProgram />
