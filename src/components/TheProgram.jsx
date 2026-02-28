@@ -98,12 +98,6 @@ export default function TheProgram() {
           </p>
         </SectionReveal>
 
-        <SectionReveal delay={0.1}>
-          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-16 max-w-lg">
-            Built for builders.
-          </h2>
-        </SectionReveal>
-
         {/* Desktop — horizontal roadmap */}
         <div className="hidden md:block relative pb-16">
           {/* Connecting line */}

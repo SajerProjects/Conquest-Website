@@ -14,8 +14,8 @@ const PRINCIPLES = [
     text: 'We teach you to use AI as a tool, not a crutch. Cognitive sovereignty matters.',
   },
   {
-    title: 'Play long games',
-    text: 'No shortcuts, no hype. Durable skills, real network, compounding advantage.',
+    title: 'Understand the real world',
+    text: 'We ground everything in how the world actually works — economics, systems, leverage — so you know what\'s coming and how to prepare.',
   },
 ];
 
