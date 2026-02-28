@@ -1,0 +1,13 @@
+.neural-network {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  padding-left: 48px;
+}
+
+.neural-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
