@@ -33,7 +33,7 @@ export default function Hero() {
       />
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10 w-full pt-24 pb-20">
-        <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-8 items-center">
           {/* Left — Copy */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -82,7 +82,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="hidden lg:block h-[480px]"
+            className="h-[280px] sm:h-[360px] lg:h-[480px]"
           >
             <NeuralNetwork />
           </motion.div>

@@ -2,8 +2,14 @@
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 400px;
-  padding-left: 48px;
+  min-height: 200px;
+  padding-left: 0;
+}
+
+@media (min-width: 1024px) {
+  .neural-network {
+    padding-left: 48px;
+  }
 }
 
 .neural-canvas {
