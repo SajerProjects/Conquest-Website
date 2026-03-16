@@ -57,7 +57,7 @@ function RoadmapNode({ step, index, hovered, onHover, onLeave }) {
       {/* Label */}
       <motion.span
         className="mt-4 text-sm md:text-base font-medium tracking-wide"
-        animate={{ color: isHovered ? '#C9A84C' : '#F5F5F5' }}
+        animate={{ color: isHovered ? '#7B5EA7' : '#F5F5F5' }}
         transition={{ duration: 0.2 }}
       >
         {step.title}
