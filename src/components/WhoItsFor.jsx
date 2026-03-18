@@ -1,4 +1,13 @@
 import SectionReveal from './SectionReveal';
+import Button from './Button';
+
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const offset = 120;
+  const top = el.getBoundingClientRect().top + window.scrollY - offset;
+  window.scrollTo({ top, behavior: 'smooth' });
+}
 
 const TRAITS = [
   '...see what\'s coming and don\'t wait for permission to move',
@@ -35,9 +44,12 @@ export default function WhoItsFor() {
         </div>
 
         <SectionReveal delay={0.5}>
-          <p className="text-lg text-text-primary font-medium">
+          <p className="text-lg text-text-primary font-medium mb-8">
             You already know if this is you.
           </p>
+          <Button onClick={() => scrollToSection('apply')} variant="outline">
+            Apply →
+          </Button>
         </SectionReveal>
       </div>
     </section>
