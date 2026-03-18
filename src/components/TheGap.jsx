@@ -3,10 +3,10 @@ import KShapeAnimation from './KShapeAnimation';
 
 export default function TheGap() {
   return (
-    <section id="the-gap" className="py-24 md:py-36">
+    <section className="py-24 md:py-36">
       <div className="max-w-[1200px] mx-auto px-6 md:px-10">
         <SectionReveal>
-          <p className="text-xs tracking-[0.3em] uppercase text-text-muted font-mono mb-12">
+          <p id="the-gap" className="text-xs tracking-[0.3em] uppercase text-text-muted font-mono mb-12 scroll-mt-28">
             01 / The Divide
           </p>
         </SectionReveal>
