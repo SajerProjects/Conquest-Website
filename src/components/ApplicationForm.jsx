@@ -14,11 +14,8 @@ const INITIAL_FORM = {
   firstName: '',
   lastName: '',
   email: '',
-  role: '',
   aiExperience: '',
   whyJoin: '',
-  whatBuild: '',
-  hearAbout: '',
 };
 
 function InputField({ label, required, ...props }) {
@@ -99,7 +96,7 @@ export default function ApplicationForm() {
   };
 
   return (
-    <section id="apply" className="py-24 md:py-36">
+    <section className="py-24 md:py-36">
       <div className="max-w-[1200px] mx-auto px-6 md:px-10">
         <SectionReveal>
           <p className="text-xs tracking-[0.3em] uppercase text-text-muted font-mono mb-12">
@@ -132,7 +129,7 @@ export default function ApplicationForm() {
                 transition={{ duration: 0.3 }}
               >
                 <SectionReveal delay={0.1}>
-                  <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
+                  <h2 id="apply" className="text-3xl md:text-4xl font-bold text-text-primary mb-4 scroll-mt-24">
                     Apply to Conquest
                   </h2>
                   <p className="text-text-secondary leading-relaxed mb-12">
@@ -171,14 +168,6 @@ export default function ApplicationForm() {
                       placeholder="jane@example.com"
                     />
 
-                    <InputField
-                      label="Current Role / What You Do"
-                      type="text"
-                      value={form.role}
-                      onChange={update('role')}
-                      placeholder="Software developer, student, business owner..."
-                    />
-
                     <SelectField
                       label="Experience with AI"
                       required
@@ -194,22 +183,6 @@ export default function ApplicationForm() {
                       value={form.whyJoin}
                       onChange={update('whyJoin')}
                       placeholder="What draws you to this community..."
-                    />
-
-                    <TextAreaField
-                      label="What do you want to build or learn?"
-                      rows={3}
-                      value={form.whatBuild}
-                      onChange={update('whatBuild')}
-                      placeholder="Projects, skills, goals..."
-                    />
-
-                    <InputField
-                      label="How did you hear about us?"
-                      type="text"
-                      value={form.hearAbout}
-                      onChange={update('hearAbout')}
-                      placeholder="Twitter, a friend, search..."
                     />
 
                     <div className="pt-4">

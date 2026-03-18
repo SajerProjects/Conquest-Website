@@ -10,8 +10,8 @@ const NAV_LINKS = [
 function scrollToSection(id) {
   const el = document.getElementById(id);
   if (!el) return;
-  const navHeight = 72;
-  const top = el.getBoundingClientRect().top + window.scrollY - navHeight;
+  const offset = 120;
+  const top = el.getBoundingClientRect().top + window.scrollY - offset;
   window.scrollTo({ top, behavior: 'smooth' });
 }
 
@@ -68,20 +68,26 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-[1200px] mx-auto px-6 md:px-10 flex items-center justify-between h-[72px]">
-          <a
+          <motion.a
             href="/"
             onClick={handleLogoClick}
             className="text-text-primary font-semibold text-lg tracking-[0.2em] uppercase"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
           >
             Conquest
-          </a>
+          </motion.a>
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-10">
-            {NAV_LINKS.map((link) => (
-              <button
+            {NAV_LINKS.map((link, i) => (
+              <motion.button
                 key={link.target}
                 onClick={() => handleNavClick(link)}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 + i * 0.1, ease: 'easeOut' }}
                 className={`text-sm tracking-wider uppercase transition-colors duration-300 cursor-pointer bg-transparent border-0 ${
                   link.accent
                     ? 'text-accent border border-accent/40 px-5 py-1.5 hover:bg-accent hover:text-bg'
@@ -89,7 +95,7 @@ export default function Navbar() {
                 }`}
               >
                 {link.label}
-              </button>
+              </motion.button>
             ))}
           </div>
 

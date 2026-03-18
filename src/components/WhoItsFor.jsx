@@ -2,7 +2,7 @@ import SectionReveal from './SectionReveal';
 
 const TRAITS = [
   '...see what\'s coming and don\'t wait for permission to move',
-  '...want to understand the systems, not just the tools',
+  '...want to continuously learn and compound growth',
   '...are done consuming and ready to build',
   '...have never fit the default path',
   '...are looking for the room that changes everything',

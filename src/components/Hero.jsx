@@ -5,8 +5,8 @@ import NeuralNetwork from './NeuralNetwork';
 function scrollToSection(id) {
   const el = document.getElementById(id);
   if (!el) return;
-  const navHeight = 72;
-  const top = el.getBoundingClientRect().top + window.scrollY - navHeight;
+  const offset = 120;
+  const top = el.getBoundingClientRect().top + window.scrollY - offset;
   window.scrollTo({ top, behavior: 'smooth' });
 }
 
@@ -16,9 +16,8 @@ export default function Hero() {
       id="top"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Subtle background glow */}
+      {/* Bottom border line */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-accent/[0.03] rounded-full blur-[120px]" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border-light to-transparent" />
       </div>
 
@@ -35,21 +34,30 @@ export default function Hero() {
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-10 w-full pt-24 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-8 items-center">
           {/* Left — Copy */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: 'easeOut' }}
-          >
+          <div>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight text-text-primary mb-6 uppercase" style={{ fontFamily: "'Syne', sans-serif" }}>
-              There is No Demand
-              <br />
-              <span className="text-text-secondary">for the Average.</span>
+              <motion.span
+                className="block overflow-hidden"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              >
+                There is No Demand
+              </motion.span>
+              <motion.span
+                className="block overflow-hidden text-text-secondary"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              >
+                for the Average.
+              </motion.span>
             </h1>
 
             <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.1, duration: 0.6, ease: 'easeOut' }}
               className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-xl mb-10"
             >
               The people who will define what comes next are being selected
@@ -57,9 +65,9 @@ export default function Hero() {
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.5 }}
+              transition={{ delay: 1.4, duration: 0.5, ease: 'easeOut' }}
               className="flex flex-wrap items-center gap-6"
             >
               <Button
@@ -75,13 +83,13 @@ export default function Hero() {
                 Learn more ↓
               </Button>
             </motion.div>
-          </motion.div>
+          </div>
 
           {/* Right — Neural Network Animation */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 1.0, duration: 1.2, ease: 'easeOut' }}
             className="h-[280px] sm:h-[360px] lg:h-[480px]"
           >
             <NeuralNetwork />
