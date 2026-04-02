@@ -22,7 +22,8 @@ export default function TheGap() {
               <p className="text-lg text-text-secondary leading-relaxed mb-6">
                 Most people won't adapt. Not because they can't — because they
                 won't make the choices that compound. The few with real agency
-                are pulling away fast, and the distance is growing every day.
+                are forming tribes and pulling away fast — and the distance
+                is growing every day.
               </p>
               <p className="text-lg text-text-secondary leading-relaxed mb-6">
                 That environment barely exists. Most AI communities are flooded

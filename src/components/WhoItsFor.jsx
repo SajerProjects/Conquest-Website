@@ -11,7 +11,7 @@ function scrollToSection(id) {
 
 const TRAITS = [
   '...see what\'s coming and don\'t wait for permission to move',
-  '...want to continuously learn and compound growth',
+  '...want to be around people who make them better',
   '...are done consuming and ready to build',
   '...have never fit the default path',
   '...are looking for the room that changes everything',

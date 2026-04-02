@@ -4,8 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TheGap from './components/TheGap';
-import TheProgram from './components/TheProgram';
-import Curriculum from './components/Curriculum';
+// Hidden for now — re-enable when ready to show education content
+// import TheProgram from './components/TheProgram';
+// import Curriculum from './components/Curriculum';
 import WhoItsFor from './components/WhoItsFor';
 import ApplicationForm from './components/ApplicationForm';
 import Footer from './components/Footer';
@@ -56,8 +57,6 @@ function Home() {
             <Hero />
             <TheGap />
             <WhoItsFor />
-            <Curriculum />
-            <TheProgram />
             <ApplicationForm />
           </main>
           <Footer />
