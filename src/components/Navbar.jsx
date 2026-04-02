@@ -3,7 +3,6 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const NAV_LINKS = [
-  { label: 'About', target: '/about', scroll: false },
   { label: 'Apply', target: 'apply', scroll: true, accent: true },
 ];
 

@@ -11,7 +11,7 @@ import WhoItsFor from './components/WhoItsFor';
 import ApplicationForm from './components/ApplicationForm';
 import Footer from './components/Footer';
 import NeuralNetwork from './components/NeuralNetwork';
-import About from './pages/About';
+// import About from './pages/About';
 
 function Splash({ onComplete }) {
   useEffect(() => {
@@ -71,7 +71,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        {/* <Route path="/about" element={<About />} /> */}
       </Routes>
     </BrowserRouter>
   );
